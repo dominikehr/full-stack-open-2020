@@ -1,0 +1,8 @@
+title 0.6: New note
+
+note over browser: user enters data in form\nand clicks save
+note over browser: onsubmit event handler from previously fetched\nspa.js fires, creates new note, adds to and\nrerenders note list and sends data to server
+note over browser: post request formed that contains new note data as request payload
+note over browser: request header content type: application/json
+browser->server: HTTP POST https://fullstack-exampleapp-herokuapp.com/new_note_spa
+server-->browser: HTTP 201 created {"message":"note created"}
