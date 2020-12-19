@@ -1,0 +1,1 @@
+GET https://tranquil-thicket-90800.herokuapp.com/info
