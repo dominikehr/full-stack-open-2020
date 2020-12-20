@@ -1,1 +1,1 @@
-GET https://tranquil-thicket-90800.herokuapp.com/info
+GET https://polar-wave-66953.herokuapp.com/info

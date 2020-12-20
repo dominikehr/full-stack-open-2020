@@ -1,7 +1,7 @@
-POST https://tranquil-thicket-90800.herokuapp.com/api/persons HTTP/1.1
+POST https://polar-wave-66953.herokuapp.com/api/persons HTTP/1.1
 Content-Type: application/json
 
 {
     "name": "MazeFrei",
-    "number": "12345"
+    "number": "123455432"
 }

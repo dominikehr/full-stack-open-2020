@@ -85,10 +85,15 @@ const App = () => {
         })
         .catch(error => {
           setNotification({
-            message: error.message,
-            style: 'error' })
+            // message accesses .error element which we appended to the json response in the backend errorHandler
+            message: `CAUTION: ${error.response.data.error}`,
+            style: 'error' 
+          })
+          setTimeout(() => {
+            setNotification({message: null, style: null})
           }, 3000)
-      }
+      })
+    }
   }
 
   const handleNameChange = (event) => {
