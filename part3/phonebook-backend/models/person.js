@@ -6,32 +6,30 @@ const url = process.env.MONGODB_URI
 console.log('connecting to', url)
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
-  .then(result => {
-    console.log('connected to MongoDB')
-  })
+  .then( console.log('connected to MongoDB'))
   .catch((error) => {
     console.log('error connecting to MongoDB:', error.message)
   })
 
-  const personSchema = new mongoose.Schema({
-    name: {
-      type: String, required: true, unique: true, minLength: 3
-    },
-    number: {
-      type: String, required: true, minLength: 8
-    } 
-  })
+const personSchema = new mongoose.Schema({
+  name: {
+    type: String, required: true, unique: true, minLength: 3
+  },
+  number: {
+    type: String, required: true, minLength: 8
+  }
+})
 
-  personSchema.plugin(uniqueValidator)
+personSchema.plugin(uniqueValidator)
 
-  
-  personSchema.set('toJSON', {
-    transform: (document, returnedObject) => {
-      const obj = returnedObject;
-      obj.id = obj._id.toString();
-      delete obj._id;
-      delete obj.__v;
-    },
-  })
+
+personSchema.set('toJSON', {
+  transform: (document, returnedObject) => {
+    const obj = returnedObject
+    obj.id = obj._id.toString()
+    delete obj._id
+    delete obj.__v
+  },
+})
 
 module.exports = mongoose.model('Person', personSchema)
