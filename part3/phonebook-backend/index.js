@@ -11,15 +11,7 @@ app.use(express.static('build'))
 const morgan = require('morgan')
 require('./models/person')
 
-// TODO check in solution whether they removed the response parameter
-// eslint-disable-next-line no-unused-vars
-morgan.token('person', (request, response) => {
-  if(request.method === 'POST'){
-    return JSON.stringify(request.body)
-  } else {
-    return null
-  }
-})
+morgan.token('body', (req) => JSON.stringify(req.body))
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :person'))
 app.use(express.json())
