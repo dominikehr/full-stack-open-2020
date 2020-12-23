@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Informatikzeugs",
+    "author": "Dominik Ehr",
+    "url": "www.test.de",
+    "likes": 2
+}
