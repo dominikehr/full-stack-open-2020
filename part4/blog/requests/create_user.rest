@@ -1,0 +1,11 @@
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "Domi387",
+    "name": "Dominik Ehr",
+    "password": "12345",
+    "blogs": ["5ff9dab4aff6f5eb66fd7079",
+    "5ff9dd672299dbec1711b80f"]
+    
+}

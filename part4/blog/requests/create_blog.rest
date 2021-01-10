@@ -1,9 +1,11 @@
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRvbWkzODYiLCJpZCI6IjVmZjlkZDNkMjI5OWRiZWMxNzExYjgwZSIsImlhdCI6MTYxMDIxMDY0Mn0.Jix0mRfyYXhX_lEWriFGtdFusFGg_SMPrVaLiPaoQN0
 
 {
-    "title": "NEU",
+    "title": "NEU2",
     "author": "Dominik Ehr",
     "url": "www.test.de",
-    "likes": 2
+    "likes": 2,
+    "user": "5ff9bae1b0cf83e69e2285fb"
 }
